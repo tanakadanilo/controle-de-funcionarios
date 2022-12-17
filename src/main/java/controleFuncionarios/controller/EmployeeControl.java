@@ -1,4 +1,4 @@
-package controller;
+package controleFuncionarios.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,19 +9,19 @@ import javax.faces.bean.ViewScoped;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import dao.EmployeeDao;
-import entity.Employee;
+import controleFuncionarios.dao.EmployeeDao;
+import controleFuncionarios.entity.Employee;
 
 @Component
 @ViewScoped
 public class EmployeeControl {
 
 	@Autowired
-	EmployeeDao employerDao;
+	private EmployeeDao employerDao;
 
-	Employee employee = new Employee();
+	private Employee employee = new Employee();
 
-	List<Employee> employees = new ArrayList<>();
+	private List<Employee> employees = new ArrayList<>();
 
 	@PostConstruct
 	private void init() {

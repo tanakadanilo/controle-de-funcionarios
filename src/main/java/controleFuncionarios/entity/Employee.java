@@ -1,4 +1,4 @@
-package entity;
+package controleFuncionarios.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -10,12 +10,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+import org.hibernate.annotations.ManyToAny;
 import org.springframework.lang.NonNull;
 
-import validation.ValidateEmployee;
+import controleFuncionarios.entity.auxiliary.Adress;
+import controleFuncionarios.validation.ValidateEmployee;
 
 @Entity
+@Table(name = "employee")
 public class Employee {
 
 	@Id
@@ -39,6 +46,9 @@ public class Employee {
 	private BigDecimal salarioBase;
 	private String telefone;
 	private boolean whatsapp;
+
+	@ManyToOne
+	private Adress adress;
 
 	public Employee() {
 	}

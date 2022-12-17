@@ -1,4 +1,4 @@
-package validation;
+package controleFuncionarios.validation;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -7,7 +7,7 @@ import java.util.InputMismatchException;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
-import entity.Employee;
+import controleFuncionarios.entity.Employee;
 
 public class ValidateEmployee {
 
